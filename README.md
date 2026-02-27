@@ -82,7 +82,7 @@
     - 이미지 당겨오기
 
         ```bash
-        docker puul gvenzl/oracle-xe:21-slim
+        docker pull gvenzl/oracle-xe:21-slim
         ```
 
         ![alt text](image-3.png)
