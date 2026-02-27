@@ -26,3 +26,40 @@ SELECT INSTR('HELLO, ORACLE!', 'L') AS "첫번째 L의 위치"
      , INSTR('HELLO, ORACLE!', 'L', 5) AS "5번째 이후 L의 위치"
      , INSTR('HELLO, ORACLE!', 'L', 2, 2) AS "2번째 위치 이후 두번째에 나타나는 L위치"
   FROM dual;
+
+-- 문자열 교체
+
+SELECT REPLACE ('Oh, Hello Oraacle!', 'Hello', 'HELL') AS "변경된 문자열"
+  FROM dual;
+
+-- 빈 공간을 특정 문자로 채우기
+
+SELECT LPAD('Matrix', 20, '#')
+     , RPAD('Oracle', 20, '#')
+  FROM dual;
+
+-- 두 문자열 합치기 (2개 초과는 에러남)
+
+SELECT CONCAT('Hello ', 'World')
+  FROM dual;
+
+-- 공백 제거
+
+SELECT TRIM('    Marvel Universe    ')
+     , LTRIM('    Marvel Universe    ')
+     , RTRIM('    Marvel Universe    ')
+  FROM dual;
+
+SELECT 1 AS "같아요"
+  FROM dual
+ WHERE 'Hello World' = trim('    Hello World');
+
+-- 숫자함수
+
+SELECT ROUND(1234.3456)
+     , ROUND(1234.3456, 3) -- 소수점 세번째자리까지 반올림
+     , TRUNC(1234.3456, 3)
+     , CEIL(3.14)
+     , FLOOR(3.68)
+     , MOD(11, 2)
+  FROM dual;
