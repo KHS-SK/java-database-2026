@@ -39,7 +39,7 @@ SELECT *
 
 -- LIKE - 문자열에 패턴을 검색
 -- %_ 중 현업에서는 %를 제일 많이 사용
--- Souel : _eo___, %eo%, _eo% 전부 동일하게 검색
+-- Seoul : _eo___, %eo%, _eo% 전부 동일하게 검색
 
 SELECT *
   FROM CUSTOMER
