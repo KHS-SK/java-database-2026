@@ -485,7 +485,7 @@ SQL> alter session set nls_date_format='dd-MON-rr';
     - Data Definition Language
     - Data Control Language
 
-- DML
+- DML [쿼리](./day04/4.DML.sql)
     - 데이터 조작 언어 - 데이터를 추가, 변경, 삭제, 조회하는 쿼리 명령어
     - SELECT - 조회용
     - `INSERT` - 생성(추가)용
