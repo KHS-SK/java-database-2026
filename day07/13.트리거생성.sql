@@ -13,7 +13,7 @@ BEGIN
 		    user_name, change_date)
 		VALUES 
 		   ('EMP_TRG', 'INSERT', :NEW.empno, 
-			sys_context('USERENV', 'SESSION'), sysdate);
+			sys_context('USERENV', 'SESSION_USER'), sysdate);
 
 	ELSIF updating THEN -- 데이터가 수정되면
 		-- emp_trg_log 테이블에 아래의 쿼리실행
@@ -22,7 +22,7 @@ BEGIN
 		    user_name, change_date)
 		VALUES 
 		   ('EMP_TRG', 'UPDATE', :OLD.empno, 
-			sys_context('USERENV', 'SESSION'), sysdate);
+			sys_context('USERENV', 'SESSION_USER'), sysdate);
 	
 	ELSIF deleting THEN -- 데이터가 삭제되면
 		-- emp_trg_log 테이블에 아래의 쿼리실행
@@ -31,6 +31,6 @@ BEGIN
 		    user_name, change_date)
 		VALUES 
 		   ('EMP_TRG', 'DELETE', :OLD.empno, 
-			sys_context('USERENV', 'SESSION'), sysdate);
-	
+			sys_context('USERENV', 'SESSION_USER'), sysdate);
+	END IF;
 END;
